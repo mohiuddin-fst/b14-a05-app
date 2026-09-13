@@ -55,7 +55,7 @@ const TechnologyCard = ({ technology, stack, setStack }: ITechnologyCardProps) =
           className="btn btn-primary rounded-xl"
           disabled={isSelected}
         >
-          {isSelected ? "Added to Stack" : "Add to Stack"}
+          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>
