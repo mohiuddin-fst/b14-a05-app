@@ -1,4 +1,4 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../types/technology";
 import { Bounce, toast } from "react-toastify";
 
@@ -9,16 +9,14 @@ interface ITechnologyCardProps {
 }
 
 const TechnologyCard = ({ technology, stack, setStack }: ITechnologyCardProps) => {
-  const [isSelected, setIsSelected] = useState(false);
+  const isSelected = stack.some((item) => item.id === technology.id);
 
   const handleAddToStack = () => {
-    const alreadyInStack = stack.some((item) => item.id === technology.id);
-    if (alreadyInStack) {
+    if (isSelected) {
       toast.warning(`${technology.name} is already in your stack`);
       return;
     }
 
-    setIsSelected(true);
     setStack([...stack, technology]);
 
     toast.success(`${technology.name} added to your stack`, {
@@ -57,7 +55,7 @@ const TechnologyCard = ({ technology, stack, setStack }: ITechnologyCardProps) =
           className="btn btn-primary rounded-xl"
           disabled={isSelected}
         >
-          {isSelected ? "✓ Added to Stack" : "Add to Stack"}
+          {isSelected ? "Added to Stack" : "Add to Stack"}
         </button>
       </div>
     </div>
