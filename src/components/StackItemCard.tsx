@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import { TbTrash } from "react-icons/tb";
 import { toast } from "react-toastify";
-import type { ITechnology } from "../types/technology";
+import type { ITechnology } from "../types/Technology";
 
 interface IStackItemCardProps {
   technology: ITechnology;

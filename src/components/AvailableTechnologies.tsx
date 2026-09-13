@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { ITechnology } from "../types/technology";
+import type { ITechnology } from "../types/Technology";
 import TechnologyCard from "./TechnologyCard";
 
 interface IAvailableTechnologiesProps {

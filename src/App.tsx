@@ -2,7 +2,7 @@ import { Suspense, useState } from "react";
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
 import Technologies from "./components/Technologies";
-import type { ITechnology } from "./types/technology";
+import type { ITechnology } from "./types/Technology";
 import Footer from "./components/Footer";
 
 
