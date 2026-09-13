@@ -11,7 +11,6 @@ interface IStackItemCardProps {
 
 const StackItemCard = ({ technology, stack, setStack }: IStackItemCardProps) => {
   const handleRemove = (technology: ITechnology) => {
-    // Keep every item EXCEPT the one whose id matches — removes just this one.
     const restStack = stack.filter((item) => item.id !== technology.id);
     setStack(restStack);
     toast.info(`${technology.name} removed from your stack`);

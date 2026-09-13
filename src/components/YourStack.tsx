@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import { toast } from "react-toastify";
-import type { ITechnology } from "../types/technology";
+import type { ITechnology } from "../types/Technology";
 import StackItemCard from "./StackItemCard";
 
 interface IYourStackProps {
@@ -18,9 +18,7 @@ const YourStack = ({ stack, setStack }: IYourStackProps) => {
     <div className="card bg-base-100 border border-base-300 p-5 h-fit sticky top-6">
       <h2 className="font-bold text-xl">Your Stack</h2>
       <p className="text-sm text-base-content/60 mb-4">
-        {stack.length === 0
-          ? "No technologies selected yet."
-          : `${stack.length} Technology Selected`}
+        {stack.length === 0 ? "No technologies selected yet." : `${stack.length} Technology Selected`}
       </p>
 
       {stack.length === 0 ? (

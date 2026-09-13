@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import type { ITechnology } from "../types/technology";
+import type { ITechnology } from "../types/Technology";
 import { Bounce, toast } from "react-toastify";
 
 interface ITechnologyCardProps {

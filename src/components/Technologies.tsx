@@ -1,5 +1,5 @@
 import { use, useState } from "react";
-import type { ITechnology } from "../types/technology";
+import type { ITechnology } from "../types/Technology";
 import AvailableTechnologies from "./AvailableTechnologies";
 import YourStack from "./YourStack";
 
